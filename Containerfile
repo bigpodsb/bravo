@@ -1,5 +1,6 @@
 
 ARG FEDORA_MAJOR_VERSION
+ARG FEDORA_MAJOR_TAG="40"
 ARG IMAGE_TYPE
 FROM cgr.dev/chainguard/helm:latest as helm
 FROM cgr.dev/chainguard/kubectl:latest as kubectl
@@ -9,7 +10,7 @@ RUN dnf install -y dotnet-sdk-7.0 --downloadonly
 RUN mkdir /pkg
 RUN cp /var/cache/dnf/updates-*/packages/* /pkg/
 
-FROM ghcr.io/ublue-os/aurora${IMAGE_TYPE}:${FEDORA_MAJOR_VERSION}
+FROM ghcr.io/ublue-os/aurora${IMAGE_TYPE}:${FEDORA_MAJOR_TAG}
 ARG IMAGE_NAME="bigpodsb-bravo"
 ARG IMAGE_VENDOR="bigpod98"
 ARG IMAGE_TYPE
