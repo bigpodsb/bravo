@@ -5,7 +5,7 @@ metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-updates-release
 enabled=1
 enabled_metadata=1
 type=rpm-md
-gpgcheck=1
+gpgcheck=0
 repo_gpgcheck=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
 
